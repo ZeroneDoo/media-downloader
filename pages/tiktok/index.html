@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/x-ico" href="https://www.tiktok.com/favicon.ico"> -->
+    <title>TikTok Video Downloader - ZeroneDoo</title>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+                colors: {
+                    'primary': '#CD0C0D',
+                },
+                fontFamily: {
+                    'nunito': ['Nunito, sans-serif'],
+                },
+            }
+          }
+        }
+    </script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Quicksand:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+<body class="font-nunito flex flex-col min-h-screen">
+    <nav class="px-10 py-5 flex items-center justify-between border-b border-[#ddd]">
+        <!-- logo -->
+        <div class="text-[18px] font-semibold">
+            <p class="lg:block md:block hidden"><span class="text-primary">Zerone</span> Downloader</p>
+        </div>
+
+        <!-- list -->
+        <div class="flex items-center gap-3">
+            <a href="/tiktok" class="hover:text-primary transition-all text-primary font-semibold">TikTok</a>
+            <a href="/youtube" class="hover:text-primary transition-all ">Youtube</a>
+            <a href="/instagram" class="hover:text-primary transition-all ">Instagram</a>
+        </div>
+    </nav>
+
+    <div id="wrapper" class="flex-grow lg:w-[60%] md:w-[90%] w-[93%] p-3 mx-auto mt-7 ">
+        <h2 class="text-center text-[22px] font-semibold my-6">Download Video and Audio from TikTok</h2>
+        <div id="wrapper-form" class="w-full">
+            <form id="tiktok-form" class="lg:w-[60%] md:w-[60%] w-full flex justify-center mx-auto">
+                <input type="text" id="tiktok-links" autocomplete="off" name="links" placeholder="Masukan link video TikTok" class="border rounded-tl rounded-bl p-2 border-['#C0c0c0'] focus:outline-primary focus: w-full">
+                <button id="btn-tiktok" class="font-semibold bg-primary text-white rounded-tr px-6 py-1 rounded-br text-[16px]">Cari</button>
+            </form>
+        </div>
+    </div>
+    <div class="lg:w-[60%] md:w-[90%] w-full mx-auto my-5 flex">
+        <div id="results" class="hidden flex flex-col justify-center items-center p-6 bg-primary/10 lg:rounded-lg md:rounded-lg rounded-none w-full gap-3">
+        </div>
+    </div>
+
+    <footer class="p-5 border border-[#ddd]">
+        <p class="text-black font-bold lg:text-[20px] md:text-[18px] text-[17px] mb-5"><span class="text-primary">Zerone</span> Downloader</p>
+        <hr class="bg-[#ddd] my-3">
+        <p class="text-center font-semibold text-[15px] text-black">&copy; 2023 ZeroneDoo - Zerone Downloader</p>
+    </footer>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
